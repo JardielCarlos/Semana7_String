@@ -1,13 +1,11 @@
-const createList = (Elements, Text) =>{
+const createList = (Elements, Text = "Text") =>{
   const ul = document.createElement("ul")
   document.getElementById("conteudo").appendChild(ul)
   for (let c = 0; c < Elements; c++){
-    const texto = document.createTextNode(Text + (c+1))
+    const texto = document.createTextNode(Text + ' ' + (c+1))
     const li = document.createElement("li")
     li.appendChild(texto)
     ul.appendChild(li)
-
   }
-
 }
 const lista = createList(5, "Item");
